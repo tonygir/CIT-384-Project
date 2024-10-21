@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Amoeba Music Collection</h1>
+    </header>
+
+    <div class="gallery">
+        <div>
+            <img src="images/Image024.jpg" alt="Photo 1" onclick="openLightbox('images/Image024.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+        <div>
+            <img src="images/Image025.jpg" alt="Photo 2" onclick="openLightbox('images/Image025.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+        <div>
+            <img src="images/Image026.jpg" alt="Photo 3" onclick="openLightbox('images/Image026.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+        <div>
+            <img src="images/Image027.jpg" alt="Photo 3" onclick="openLightbox('images/Image027.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+        <div>
+            <img src="images/Image028.jpg" alt="Photo 3" onclick="openLightbox('images/Image028.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src=""alt="Lightbox Image">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Togo Photos</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
