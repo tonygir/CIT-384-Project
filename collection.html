@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
+    <title>Amoeba Music Collection</title>
     <link rel="icon" type="image/jpg" href="images/favicon.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Amoeba Music Collection</h1>
+        <div class="header-content">
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+         <h1 class="title">Empire Photos</h1>
+        </div>
     </header>
-
     <div class="gallery">
         <div>
             <img src="images/Image024.jpg" alt="Photo 1" onclick="openLightbox('images/Image024.jpg')">
@@ -45,7 +53,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Togo Photos</p>
+        <p>&copy; 2024 Empire Photos</p>
     </footer>
 
     <script src="script.js"></script> 

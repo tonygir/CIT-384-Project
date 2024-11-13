@@ -18,11 +18,64 @@ body {
 header {
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    margin: 0;
+    padding: 1rem 0;
     width: 100%;
-    margin-bottom: 60px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+/* Center and constrain header content */
+.header-content {
+    max-width: 1200px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+/* Navigation menu styling */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation menu list */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation menu items */
+.nav-menu li {
+    margin-right: 20px; /* Space between menu items */
+}
+
+/* Navigation links */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for navigation links */
+.nav-menu a:hover {
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Centered title styling */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
 }
 
 /* Styling for the heading above the collections */
@@ -33,9 +86,8 @@ header {
 
 .collection-heading h2 {
     color: white; 
-    font-size: 28px; 
+    font-size: 22px; 
     font-weight: bold;
-    text-decoration: underline;
 }
 
 /* Gallery layout with grid system that auto-fits images into rows */
@@ -180,13 +232,17 @@ header {
 
 /* Footer styling */
 footer {
+    max-width: 1800px;
+    margin: 0 auto;
     text-align: center;
+    justify-content: space-between;
     padding: 1rem;
     background-color: #333;
     color: white;
     position: static;
     width: 100%;
     bottom: 0;
+    position: relative;
 }
 
 
