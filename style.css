@@ -1,5 +1,12 @@
-h1 {
-    font-style: italic;
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 body {
@@ -8,7 +15,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: #333;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,12 +23,19 @@ body {
 
 /* Header styling */
 header {
-    background-color: #333;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 1rem 0;
     width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     margin-bottom: 30px;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    backdrop-filter: blur(5px);
 }
 
 /* Center and constrain header content */
@@ -49,7 +63,7 @@ header {
 
 /* Navigation menu items */
 .nav-menu li {
-    margin-right: 20px; /* Space between menu items */
+    margin-right: 20px; 
 }
 
 /* Navigation links */
@@ -101,6 +115,7 @@ header {
     margin: 0 auto;
     box-sizing: border-box;
     padding-bottom: 100px;
+    margin-top: 60px;
 }
 
 .gallery img {
@@ -142,7 +157,7 @@ header {
     display: inline-block;
     margin-top: 10px;
     padding: 5px 10px;
-    background-color: #333;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 5px;
@@ -160,58 +175,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     max-width: 800px;
-}
-/* Style the image */
-.collection-image {
-    width: 100%;
-    max-width: 500px; 
-    height: auto; 
-    margin-right: 20px;
-    border-radius: 5px;
-    display: block;
-    cursor: pointer;
-}
-
-/* Style the title */
-.collection-title {
-    text-decoration: none; 
-    color: white; 
-    font-size: 18px; 
-    font-weight: bold; 
-    display: block;
-    margin-top: 20px; 
-    text-align: left;
 }
 
 .collection-title:hover {
     text-decoration: underline;
-}
-
-/* Random Button styling */
-.randombutton {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    font-size: 18px;
-    color: white;
-    background-color: blue;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.randombutton:hover {
-    background-color: blue;
-}
-
-/* Random Photo Container */
-#randomPhotoContainer {
-    margin-top: 20px;
-    text-align: center;
 }
 
 .photo-credit {
@@ -227,22 +196,111 @@ header {
     flex: 1;
     text-align: center;
     padding: 50px;
-    background-color: black;
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.collection-preview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.collection-preview a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.collection-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+}
+
+.collection-title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.about-content{
+    padding: 200px;
 }
 
 /* Footer styling */
 footer {
-    max-width: 1800px;
     margin: 0 auto;
     text-align: center;
     justify-content: space-between;
-    padding: 1rem;
-    background-color: #333;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    position: static;
+    position: relative;
     width: 100%;
     bottom: 0;
-    position: relative;
+    margin-top: auto;
+    width: 100%;
 }
 
+.social-links img {
+    width: 24px;
+    margin: 0 10px;
+}
 
+.hero {
+    position: relative;
+    color: white;
+    overflow: hidden;
+    height: 500px;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-background.fade-out {
+    opacity: 0;
+}
+
+.hero-background.fade-in {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.collection-preview:hover .collection-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.collection-preview:hover .collection-title {
+    text-decoration: underline;
+}
+
+.contact-content{
+    margin-top: 50px;
+}

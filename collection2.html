@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C4 Corvette Collection</title>
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+         <h1 class="title">Empire Photos</h1>
+        </div>
+    </header>
+    <div class="gallery">
+        <div>
+            <img src="images/img6.jpg" alt="Photo 1" onclick="openLightbox('images/img6.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+        <div>
+            <img src="images/Image037.jpg" alt="Photo 2" onclick="openLightbox('images/Image037.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+        <div>
+            <img src="images/Image008-1.jpg" alt="Photo 3" onclick="openLightbox('images/Image008-1.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+        <div>
+            <img src="images/Image022.jpg" alt="Photo 3" onclick="openLightbox('images/Image022.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+        <div>
+            <img src="images/Image034.jpg" alt="Photo 3" onclick="openLightbox('images/Image034.jpg')">
+            <button class="like-btn" onclick="likePhoto(this)">Like ❤️</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src=""alt="Lightbox Image">
+    </div>
+
+    <div class="photo-credit">
+        <a>Photos by Mampre Khodadadi</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Empire Photos</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>

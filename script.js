@@ -22,46 +22,51 @@ function likePhoto(button) {
     button.textContent = button.textContent.includes('Liked') ? 'Like ❤️' : 'Liked ❤️';
 }
 
-document.addEventListener('DOMContentLoaded', function() {
 
-const randomPhotoBtn = document.getElementById('randomPhotoBtn');
-const randomPhotoContainer = document.getElementById('randomPhotoContainer');
 
-if (randomPhotoBtn) {
-    randomPhotoBtn.addEventListener('click', displayRandomPhoto);
-} else {
-    console.error('Button with id="randomPhotoBtn" not found');
-}
-
-let lastImageIndex = null;
-
-function displayRandomPhoto() {
-
-const imageList = [
-    'Image024.jpg', 
-    'Image025.jpg', 
-    'Image026.jpg', 
-    'Image027.jpg',
-    'Image028.jpg',
-];
-
-    let randomIndex;
-        
-    do {
-        randomIndex = Math.floor(Math.random() * imageList.length);
-    } while (randomIndex === lastImageIndex);
+    document.addEventListener("DOMContentLoaded", () => {
+        const heroBackground = document.querySelector(".hero-background");
+        const images = [
+            "images/Image024.jpg",
+            "images/Image025.jpg",
+            "images/Image026.jpg",
+            "images/Image027.jpg",
+            "images/Image028.jpg",
+            "images/Image034.jpg",
+            "images/Image037.jpg",
+            "images/Image030.jpg",
+            "images/Image031.jpg",
+            "images/Image033.jpg"
+        ];
     
-    const randomImage = imageList[randomIndex];
+        let previousIndex = -1;
     
-    const imgElement = document.createElement('img');
+        function getRandomIndex(exclude) {
+            let index;
+            do {
+                index = Math.floor(Math.random() * images.length);
+            } while (index === exclude);
+            return index;
+        }
     
-    randomPhotoContainer.innerHTML = '';
+        function changeHeroImage() {
+            heroBackground.classList.remove("fade-in");
+            heroBackground.classList.add("fade-out");
     
-    randomPhotoContainer.appendChild(imgElement);
-    imgElement.src = `images/${randomImage}`;
-    imgElement.style.maxWidth = '20%';
-    imgElement.style.borderRadius = '10px';
+            setTimeout(() => {
+                const randomIndex = getRandomIndex(previousIndex);
+                heroBackground.style.backgroundImage = `url(${images[randomIndex]})`;
+                previousIndex = randomIndex;
+    
+                heroBackground.classList.remove("fade-out");
+                heroBackground.classList.add("fade-in");
+            }, 1000); // Matches the CSS transition duration
+        }
 
-    lastImageIndex = randomIndex;
-}
+    // Initial image setup
+    changeHeroImage();
+
+    // Change image every 5 seconds
+    setInterval(changeHeroImage, 5000);
 });
+
