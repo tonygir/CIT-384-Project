@@ -232,7 +232,7 @@ header {
 }
 
 .about-content{
-    padding: 200px;
+    padding: 20px;
 }
 
 /* Footer styling */
@@ -303,4 +303,24 @@ footer {
 
 .contact-content{
     margin-top: 50px;
+}
+
+.logo {
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+.logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-img {
+    margin-top: 100px;
+    display: block;
+    margin: 0 auto;
+    max-width: 25%;
+    height: auto;
 }
