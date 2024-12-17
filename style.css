@@ -21,7 +21,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Header styling */
 header {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.8);
@@ -38,7 +37,6 @@ header {
     backdrop-filter: blur(5px);
 }
 
-/* Center and constrain header content */
 .header-content {
     max-width: 1200px; 
     display: flex;
@@ -47,13 +45,11 @@ header {
     margin-left: 30px;
 }
 
-/* Navigation menu styling */
 .navbar {
     display: flex;
     align-items: center;
 }
 
-/* Navigation menu list */
 .nav-menu {
     list-style: none;
     display: flex;
@@ -61,12 +57,10 @@ header {
     padding: 0;
 }
 
-/* Navigation menu items */
 .nav-menu li {
     margin-right: 20px; 
 }
 
-/* Navigation links */
 .nav-menu a {
     color: white;
     text-decoration: none;
@@ -75,14 +69,12 @@ header {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect for navigation links */
 .nav-menu a:hover {
     background-color: white;
     color: #333;
     border-radius: 5px;
 }
 
-/* Centered title styling */
 .title {
     font-size: 24px;
     font-weight: bold;
@@ -92,7 +84,6 @@ header {
     margin: 0;
 }
 
-/* Styling for the heading above the collections */
 .collection-heading {
     text-align: center; 
     padding: 10px 0; 
@@ -104,7 +95,6 @@ header {
     font-weight: bold;
 }
 
-/* Gallery layout with grid system that auto-fits images into rows */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -127,7 +117,6 @@ header {
     transition: transform 0.2s ease;
 }
 
-/* Lightbox styling */
 .lightbox {
     display: none;
     position: fixed;
@@ -147,12 +136,10 @@ header {
     border-radius: 10px;
 }
 
-/* Show lightbox */
 .lightbox.active {
     display: flex;
 }
 
-/* Like button styling */
 .like-btn {
     display: inline-block;
     margin-top: 10px;
@@ -170,7 +157,6 @@ header {
     background-color:black;
 }
 
-/* Container for the collection */
 .collection {
     display: flex;
     align-items: center;
@@ -191,7 +177,6 @@ header {
     font-style: italic;
 }
 
-/* Main content styling */
 .main-content {
     flex: 1;
     text-align: center;
