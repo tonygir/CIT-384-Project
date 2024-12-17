@@ -60,10 +60,9 @@ function likePhoto(button) {
     
                 heroBackground.classList.remove("fade-out");
                 heroBackground.classList.add("fade-in");
-            }, 1000); // Matches the CSS transition duration
+            }, 1000);
         }
 
-    // Initial image setup
     changeHeroImage();
 
     // Change image every 5 seconds
