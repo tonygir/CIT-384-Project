@@ -65,7 +65,6 @@ function likePhoto(button) {
 
     changeHeroImage();
 
-    // Change image every 5 seconds
     setInterval(changeHeroImage, 5000);
 });
 
